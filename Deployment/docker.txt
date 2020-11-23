@@ -1,0 +1,12 @@
+﻿docker stop $( docker ps -a -q )
+docker rm $( docker ps -a -q )
+docker rmi -f $( docker images -f "dangling=true" -q)
+docker rmi -f $( docker images core -q)
+docker rmi -f $( docker images ui -q)
+docker images
+docker ps -a
+
+
+docker build -t core -f ./PriceBookService.Core/Dockerfile .
+docker tag core gitlab.macroviewhk.com:4569/dbs/price-book-service/core:20200825.1
+docker push gitlab.macroviewhk.com:4569/dbs/price-book-service/core:20200825.1
