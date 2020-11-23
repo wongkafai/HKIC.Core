@@ -7,6 +7,6 @@ docker images
 docker ps -a
 
 
-docker build -t core -f ./PriceBookService.Core/Dockerfile .
-docker tag core gitlab.macroviewhk.com:4569/dbs/price-book-service/core:20200825.1
-docker push gitlab.macroviewhk.com:4569/dbs/price-book-service/core:20200825.1
+docker build -t core -f ./HKIC.Core/Dockerfile .
+docker tag core gitlab.macroviewhk.com:4569/dbs/price-book-service/core:20200125.1
+docker push gitlab.macroviewhk.com:4569/dbs/price-book-service/core:20200125.1
